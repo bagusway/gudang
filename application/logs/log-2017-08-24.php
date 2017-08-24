@@ -7345,3 +7345,126 @@ DEBUG - 2017-08-24 06:59:06 --> Global POST, GET and COOKIE data sanitized
 INFO - 2017-08-24 06:59:06 --> Input Class Initialized
 INFO - 2017-08-24 06:59:06 --> Language Class Initialized
 ERROR - 2017-08-24 06:59:06 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> No URI present. Default controller set.
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Loader Class Initialized
+INFO - 2017-08-24 07:06:14 --> Helper loaded: url_helper
+INFO - 2017-08-24 07:06:14 --> Database Driver Class Initialized
+INFO - 2017-08-24 07:06:14 --> Session: Class initialized using 'files' driver.
+INFO - 2017-08-24 07:06:14 --> Controller Class Initialized
+INFO - 2017-08-24 07:06:14 --> Model Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> File loaded: C:\xampp\htdocs\gudang\application\modules/Gudang/models/Gudang_models.php
+INFO - 2017-08-24 07:06:14 --> Model Class Initialized
+INFO - 2017-08-24 07:06:14 --> Helper loaded: form_helper
+INFO - 2017-08-24 07:06:14 --> Form Validation Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> File loaded: C:\xampp\htdocs\gudang\application\modules/Gudang/views/Gudang.php
+INFO - 2017-08-24 07:06:14 --> Final output sent to browser
+DEBUG - 2017-08-24 07:06:14 --> Total execution time: 0.0530
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+ERROR - 2017-08-24 07:06:14 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+ERROR - 2017-08-24 07:06:14 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+ERROR - 2017-08-24 07:06:14 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+ERROR - 2017-08-24 07:06:14 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:14 --> Config Class Initialized
+INFO - 2017-08-24 07:06:14 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:14 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:14 --> URI Class Initialized
+INFO - 2017-08-24 07:06:14 --> Router Class Initialized
+INFO - 2017-08-24 07:06:14 --> Output Class Initialized
+INFO - 2017-08-24 07:06:14 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:14 --> Input Class Initialized
+INFO - 2017-08-24 07:06:14 --> Language Class Initialized
+ERROR - 2017-08-24 07:06:14 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:15 --> Config Class Initialized
+INFO - 2017-08-24 07:06:15 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:15 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:15 --> URI Class Initialized
+INFO - 2017-08-24 07:06:15 --> Router Class Initialized
+INFO - 2017-08-24 07:06:15 --> Output Class Initialized
+INFO - 2017-08-24 07:06:15 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:15 --> Input Class Initialized
+INFO - 2017-08-24 07:06:15 --> Language Class Initialized
+ERROR - 2017-08-24 07:06:15 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:15 --> Config Class Initialized
+INFO - 2017-08-24 07:06:15 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:15 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:15 --> URI Class Initialized
+INFO - 2017-08-24 07:06:15 --> Router Class Initialized
+INFO - 2017-08-24 07:06:15 --> Output Class Initialized
+INFO - 2017-08-24 07:06:15 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:15 --> Input Class Initialized
+INFO - 2017-08-24 07:06:15 --> Language Class Initialized
+ERROR - 2017-08-24 07:06:15 --> 404 Page Not Found: /index
+INFO - 2017-08-24 07:06:15 --> Config Class Initialized
+INFO - 2017-08-24 07:06:15 --> Hooks Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> UTF-8 Support Enabled
+INFO - 2017-08-24 07:06:15 --> Utf8 Class Initialized
+INFO - 2017-08-24 07:06:15 --> URI Class Initialized
+INFO - 2017-08-24 07:06:15 --> Router Class Initialized
+INFO - 2017-08-24 07:06:15 --> Output Class Initialized
+INFO - 2017-08-24 07:06:15 --> Security Class Initialized
+DEBUG - 2017-08-24 07:06:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-08-24 07:06:15 --> Input Class Initialized
+INFO - 2017-08-24 07:06:15 --> Language Class Initialized
+ERROR - 2017-08-24 07:06:15 --> 404 Page Not Found: /index
