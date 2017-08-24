@@ -23,6 +23,9 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url().'assets/css/sb-admin.css';?>" rel="stylesheet">
 
+    <!-- datepicker -->
+    <link href="<?php echo base_url().'assets/styles/glDatePicker.default.css';?>" rel="stylesheet" type="text/css">
+
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -32,6 +35,17 @@
     <script src="js/google-code-prettify/prettify.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="glDatePicker.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function()
+        {
+            $('#mydate').glDatePicker();
+        });
+    </script>
+
     <script type="text/javascript" class="init">
     $(document).ready(function() {
           var table = $('#dataTable').DataTable( {
@@ -65,26 +79,193 @@
         });
       });
     </script>
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
 
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#exportButton").click(function () {
+                // parse the HTML table element having an id=exportTable
+                var dataSource = shield.DataSource.create({
+                    data: "#dataTable",
+                    schema: {
+                        type: "table",
+                        fields: {
+                            Kode: { type: String },
+                            Nama: { type: String },
+                            Tanggal: { type: Date },
+                            Unit: { type: Number },
+                            Harga: { type: Number },
+                            Total: { type: Number}
+                            Kategori: { type: String },
+                            Jenis: { type: String },
+                            Masa: { type: String },
+                            Susuttahun: { type: String },
+                            Susutbulan: { type: String },
+                            Nilai: { type: String },
+                            Status: { type: String },
+                        }
+                    }
+                });
+
+                // when parsing is done, export the data to Excel
+                dataSource.read().then(function (data) {
+                    new shield.exp.OOXMLWorkbook({
+                        author: "SPS",
+                        worksheets: [
+                            {
+                                name: "Data Barang",
+                                rows: [
+                                    {
+                                        cells: [
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Kode Barang"
+                                            },
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Nama Barang"
+                                            },
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: Date,
+                                                value: "Tanggal masuk"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: Number,
+                                                value: "Unit"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: Number,
+                                                value: "Harga awal"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: Number,
+                                                value: "Total Harga"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Kategori"
+                                            },
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Jenis Aktiva"
+                                            },
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Masa Manfaat"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Beban Penyusutan/tahun"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Beban Penyusutan/bulan"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Nilai Buku"
+                                            }
+                                            {
+                                                style: {
+                                                    bold: true
+                                                },
+                                                type: String,
+                                                value: "Status"
+                                            }
+                                        ]
+                                    }
+                                ].concat($.map(data, function(item) {
+                                    return {
+                                        cells: [
+                                            { type: String, value: item.Kode },
+                                            { type: String, value: item.Nama },
+                                            { type: Date, value: item.Tanggal },
+                                            { type: Number, value: item.Unit },
+                                            { type: Number, value: item.Harga },
+                                            { type: Number, value: item.Total },
+                                            { type: String, value: item.Kategori },
+                                            { type: String, value: item.Jenis },
+                                            { type: String, value: item.Masa },
+                                            { type: String, value: item.Susuttahun },
+                                            { type: String, value: item.Susutbulan },
+                                            { type: String, value: item.Nilai },
+                                            { type: String, value: item.Status }
+                                        ]
+                                    };
+                                }))
+                            }
+                        ]
+                    }).saveAs({
+                        fileName: "Data Barang"
+                    });
+                });
+            });
+        });
+    </script>
+
+    <style>
+        #exportButton, #ubah, #hapus, #tambah, #simpan {
+            border-radius: 0;
+        }
+    </style>
     <style type="text/css">
       .zui-table {
           border: none;
-          border-right: solid 1px #DDEFEF;
+          border-right: solid 1px #007bff;
           border-collapse: separate;
+          border-radius: 0.25rem;
           border-spacing: 0;
           font: normal 13px Arial, sans-serif;
       }
       .zui-table thead th {
-          background-color: #DDEFEF;
+          background-color: #007bff;
           border: none;
-          color: #336B6B;
+          color: #fff;
           padding: 10px;
           text-align: left;
-          text-shadow: 1px 1px 1px #fff;
+          /*text-shadow: 1px 1px 1px #fff;*/
           white-space: nowrap;
       }
       .zui-table tbody td {
-          border-bottom: solid 1px #DDEFEF;
+          border-bottom: solid 1px #007bff;
           color: #333;
           padding: 10px;
           text-shadow: 1px 1px 1px #fff;
@@ -169,15 +350,22 @@
             Daftar Barang
           </div>
             <div class="col-md-6"><span class="pull-right">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formtambah">
-              <i class="fa fa-plus"></i>
-                Tambah</button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="">
+              <button type="button" id="tambah" class="btn btn-primary" data-toggle="modal" data-target="#formtambah">
+                <i class="fa fa-plus"></i>
+                Tambah
+              </button>
+              <button type="button" id="ubah" class="btn btn-primary" data-toggle="modal" data-target="">
                   <i class="fa fa-edit"></i>
-                  Ubah</button> 
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="">
+                  Ubah
+              </button> 
+              <button type="button" id="hapus" class="btn btn-primary" data-toggle="modal" data-target="">
                   <i class="fa fa-trash"></i>
-                  Hapus</button>     
+                  Hapus
+              </button> 
+              <button type="button" id="exportButton" class="btn btn-primary" data-toggle="modal" data-target="">
+                  <i class="fa fa-file-excel-o"></i>
+                  Export to Excel
+              </button>     
               </span>
             </div>
           </div>
@@ -205,7 +393,8 @@
                     <br>
                     <div class="row">
                       <div class="col-md-2">Tanggal Masuk</div>
-                      <div class="col-md-4"><input id="datepicker" type="date" name="tanggal_masuk" class="form-control" placeholder="MM/DD/YYYY" required="true"></div>
+                      <div class="col-md-4"><input id="datepicker" type="date" name="tanggal_masuk" class="form-control" placeholder="MM/DD/YYYY" required="true">
+                      </div>
                       <div class="col-md-2">Unit</div>
                       <div class="col-md-4"><input id="unit" type="text" name="unit" class="input-md  textinput textInput form-control" placeholder="Unit" required="true"></div>
                     </div>
