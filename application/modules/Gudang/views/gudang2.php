@@ -1,40 +1,48 @@
+<?php 
+                    foreach ($hasil as $hasilx) {
+                    if($hasilx->kategori==1){
 
-<table>
-<form name="simpan_barang"  action="<?php echo $action;?>" method="post">
-	<tr>
-		<td> nama barang : </td> <td><input type="text" name="nama_barang"> </td>
-	</tr>
-	<tr>
-		<td> kode barang : </td> <td><input type="text" name="kode_barang"> </td>
-	</tr>
-	<tr>
-		<td>
-			Kategori : <td><select name="kategori">
-				<option value="1">fur</option>
-				<option value="2">komp</option>
-				<option value="3">Others</option>
-			</select></td>
-		</td>
-	</tr>
-	<tr><td> <input type="submit" name="simpan" value="Simpan Data"> </td></tr>
+                      $cat = "Furniture"; $cate="FUR";
+                      
 
-</form>
-</table>
-<div class="container">
+                    }
+                    elseif ($hasilx->kategori==2) {
+                      $cat = "Komputer"; $cate="KOM";
+                    }
 
-<?php
+                    else{
 
-foreach ($hasil as $hasilx) {
-	
-if ($hasilx->kategori==1) { 
-	echo "furniture";
-	
-}else{
-	echo "aaa";
-}
+                      $cat = "Others";$cate="OTHERS";
+                    }
 
-?>
-}
+                    if ($hasilx->jenis_aktiva==1) {
+                      $masa_aktif=4;
+                    }
+                    elseif ($hasilx->jenis_aktiva==2) {
+                     $masa_aktif=8;
+                    }
+                    else {
+                      $masa_aktif=12;
+                    }
 
+                   // $hasilx->susut_bulan=$hasilx->susut_tahun/12;
 
-</div>
+                    $hasilx->status="Available";
+
+                    
+                    echo "<tr><td>".$cate."-0".$hasilx->id_barang."-I-HO-2017 </td>
+                    <td>".$hasilx->nama_barang."</td>
+                    <td>".$hasilx->tanggal_masuk."</td>
+                    <td>".$hasilx->unit."</td>
+                    <td>".$hasilx->harga_awal."</td>
+                    <td>".$hasilx->total_harga."</td>
+                    <td>".$cat."</td>
+                    <td>"."Kelompok ".$hasilx->jenis_aktiva."</td>
+                    <td>".$hasilx->masa_manfaat." Tahun"."</td>
+                    <td>".$hasilx->susut_tahun."</td>
+                    <td>".$hasilx->susut_bulan."</td>
+                    <td>".$hasilx->nilai_buku."</td>
+                    <td>".$hasilx->status."</td></tr>";
+                }
+
+                  ?> <input type="submit" name="edit" value="edit"> 
